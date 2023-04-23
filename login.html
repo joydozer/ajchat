@@ -1,8 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Login</title>
         <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
     </head>
+    <body>
+        <div class="main">
+            <div class="login-box">
+                <div class="login-box-content">
+                    <img src="image/Logo.png" width="87" height="27">
+                    
+                    <h1>Welcome Folks!</h1>
+                    Email Address<br>
+                    <input id="email" type="text" placeholder="Enter your email"><br>
+                    Password<br>
+                    <input id="password" type="password" placeholder="Enter your password"><br>
+                    <input type="submit" value="Login" onclick="checkAccount();"><br>
+                    
+                    Not yet signed up? <a href="register.html">Signup now</a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function checkAccount() {
+            email = document.getElementById("email").value;
+            password = document.getElementById("password").value;
+            emails = ["goldenlamatwelu@gmail.com", "yumicopapona@gmail.com", "andrekaramoy@gmail.com", "wuntujoy@gmail.com"]
+            for (let i=0; i<email.length; i++) {
+                if(email == emails[i] && password == "12345") {
+                    localStorage.setItem("email",emails[i]);
+                    window.location.href = "chatlist.html";
+                }
+            }
+            alert("Wrong email or password!");
+            
+        }
+    </script>
 </html>

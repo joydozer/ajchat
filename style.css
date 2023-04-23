@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(122, 151, 255);
+    font-family: 'Poppins', 'Times New Roman';
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(122, 151, 255);
+}
+
+label {
+    text-align: left;
+}
+
+input[type=text] {
+    width: 364px;
+    height: 42px;
+    border-radius: 4px;
+    padding-left: 10px;    
+}
+
+input[type=text]:focus {
+    outline: 0;
+}
+
+input[type=password] {
+    width: 364px;
+    height: 42px;
+    border-radius: 4px;    
+}
+
+input[type=submit] {
+    border: 0;
+    background-color: rgb(122, 151, 255);
+    color: white;
+    width: 364px;
+    height: 42px;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-top: 39px;
+    margin-bottom: 26px;
+}
+
+input[type=image] {
+    height: 42px;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    width: 550px;
+    height: 633px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
+}
+
+.chatlist-box {
+    width: 527px;
+    height: 310px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.profile {
+    display: flex;
+}
+
+.chat-box {
+    width: 465px;
+    height: 691px;
+    border-radius: 15px;
+    background-color: rgb(216, 221, 237);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.chat-top {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    width: 465px;
+    height: 77px;
+    background-color: white;
+    border-radius: 15px 15px 0  0;
+}
+.chat-center {
+    width: 465px;
+    height: 537px;
+    background-color: rgb(216, 221, 237);
+
+}
+.chat-bottom {
+    gap: 0;
+    justify-content: center;
+    border-radius: 0 0 15px 15px;
+}
+
+.login-box-content {
+    text-align: center;
+    border: 1px black;
+    padding-top: 50px;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat List</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="main">
+            <div class="chatlist-box">
+                <div class="profile">
+                    <div id="fullname" class="user"></div>
+                    <div class="logout">
+                        <input type="submit" value="Logout" onclick="logout()" style="width: 99px; border-radius: 4px; margin: 0;">
+                    </div>
+                </div>
+                <div class="chatlist-box-content">
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        email = localStorage.getItem("email");
+        emails = ["goldenlamatwelu@gmail.com", "yumicopapona@gmail.com", "andrekaramoy@gmail.com", "wuntujoy@gmail.com"]
+        fullname = "";
+        fullnames = ["Golden Lamatwelu", "Yumico Papona", "Andre Karamoy", "Jonathan Wuntu"];
+        for(let i=0; i<emails.length;i++) {
+            if(email == emails[i]) {
+                fullname += fullnames[i];
+            }
+        }
+        document.getElementById("fullname").innerHTML += fullname;
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+</html>
