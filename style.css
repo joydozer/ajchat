@@ -38,7 +38,12 @@ input[type=text]:focus {
 input[type=password] {
     width: 364px;
     height: 42px;
-    border-radius: 4px;    
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+input[type=password]:focus {
+    outline: 0;
 }
 
 input[type=submit] {
@@ -57,11 +62,58 @@ input[type=image] {
     height: 42px;
 }
 
+.logoTop {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 150px;
+    position: fixed;
+    padding-left: 100px;
+}
+
 .main {
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
+}
+.indexGetStarted {
+    text-align: right;
+}
+
+.indexGetStarted h1 {
+    font-size: 70px;
+    color: white;
+    margin: 0;
+}
+
+.indexGetStarted p {
+    margin: 0 0 50px 0;
+    font-style: italic;
+}
+
+.indexGetStarted button {
+    border: 0;
+    width: 158px;
+    height: 62px;
+    color: rgb(122, 151, 255);
+    background-color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 12px;
+}
+
+.indexAboutUs {
+    font-style: italic;
+}
+
+.indexAboutUs p {
+    margin: 200px 0 0 0;
+}
+
+.indexAboutUs a {
+    color: white;
+    text-decoration: underline;
 }
 
 .login-box {
@@ -70,6 +122,14 @@ input[type=image] {
     border-radius: 20px;
     background-color: white;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.25);
+}
+
+.login-box-content {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    border: 1px black;
+    padding-top: 50px;
 }
 
 .chatlist-box {
@@ -82,14 +142,15 @@ input[type=image] {
 
 
 .profile {
+    margin: 30px 0 0 30px;
     display: flex;
+    gap: 20px;
 }
 
 .chat-box {
     width: 465px;
     height: 691px;
     border-radius: 15px;
-    background-color: rgb(216, 221, 237);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -114,9 +175,126 @@ input[type=image] {
     border-radius: 0 0 15px 15px;
 }
 
-.login-box-content {
-    text-align: center;
-    border: 1px black;
-    padding-top: 50px;
+
+
+.profile-box {
+    background-color: white;
+    width: 1068px;
+    height: 699px;
+    border-radius: 20px;
 }
 
+.profile-box-content {
+    margin: 30px 0 0 30px;
+}
+
+.profile-box-content-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    row-gap: 30px;
+}
+
+.aboutus-box {
+    display: flex;
+    width: 900px;
+    height: 620px;
+    background-color: rgb(51, 51, 51);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    flex-direction: row;
+}
+
+.aboutus-box-sidebar {
+    display: flex;
+    flex-flow: column;
+    row-gap: 26px;
+    margin: 15px 0 0 30px;
+    padding-right: 15px;
+}
+
+.aboutus-box-sidebar a {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.aboutus-box-content {
+    width: 728px;
+    height: 620px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 12px;
+}
+
+.aboutus-active-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+    align-items: center;
+    flex-flow: column;
+}
+
+.aboutus-inactive-container {
+    display: none;
+}
+
+.about-us-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.about-us-box-content {
+    width: 406px;
+    height: 481px;
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 25px;
+    column-gap: 56px;
+}
+
+.peoples-box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 175px;
+    height: 228px;
+    background-color: rgb(122, 151, 255);
+    color: white;
+    border-radius: 20px;
+}
+
+.peoples-box img {
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.peoples-box p {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.peoples-box span {
+    font-size: 8px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.peoples-box-contacts {
+    height: 24px;
+    width: 96px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.peoples-box-contacts img {
+    border-radius: 0;
+    height: 24px;
+    width: 24px;
+}

@@ -1,16 +1,102 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About Us</title>
         <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="image/Logo1.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
     </head>
     <body>
         <div class="main">
-
+            <div class="login-box aboutus-box">
+                <div class="aboutus-box-sidebar">
+                    <a href="index.html"><img width="20" src="image/Arrow 2.png"></a>
+                    <a href="#" onclick="showAboutUs()">About Us</a>
+                    <a href="#" onclick="showVideoDemo()">Demo Video</a>
+                    <a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a>
+                </div>
+                <div class="aboutus-box-content">
+                    <div id="about-us" class="aboutus-active-container">
+                        <h2>The peoples behind this project!</h2>
+                        <div class="about-us-box">
+                            <div class="about-us-box-content">
+                                <div class="peoples-box">
+                                    <img src="image/pfpPlaceholder.png" width="100" height="100">
+                                    <p>Golden Lamatwelu</p>
+                                    <span>Anti-WengWeng-club</span>
+                                    <div class="peoples-box-contacts">
+                                        <a href="instagram.com"><img src="image/instagram.png"></a>
+                                        <a href="linkedin.com"><img src="image/linkedin.png"></a>
+                                        <a href="github.com"><img src="image/github.png"></a>
+                                    </div>
+                                </div>
+                                <div class="peoples-box">
+                                    <img src="image/pfpPlaceholder.png" width="100" height="100">
+                                    <p>Yumico Papona</p>
+                                    <span>Fullstack Developer</span>
+                                    <div class="peoples-box-contacts">
+                                        <a href="instagram.com"><img src="image/instagram.png"></a>
+                                        <a href="linkedin.com"><img src="image/linkedin.png"></a>
+                                        <a href="github.com"><img src="image/github.png"></a>
+                                    </div>
+                                </div>
+                                <div class="peoples-box">
+                                    <img src="image/pfpPlaceholder.png" width="100" height="100">
+                                    <p>Jonathan Wuntu</p>
+                                    <span>Moral Supporter</span>
+                                    <div class="peoples-box-contacts">
+                                        <a href="instagram.com"><img src="image/instagram.png"></a>
+                                        <a href="linkedin.com"><img src="image/linkedin.png"></a>
+                                        <a href="github.com"><img src="image/github.png"></a>
+                                    </div>
+                                </div>
+                                <div class="peoples-box">
+                                    <img src="image/pfpPlaceholder.png" width="100" height="100">
+                                    <p>Andre Karamoy</p>
+                                    <span>Fulltime Homok</span>
+                                    <div class="peoples-box-contacts">
+                                        <a href="instagram.com"><img src="image/instagram.png"></a>
+                                        <a href="linkedin.com"><img src="image/linkedin.png"></a>
+                                        <a href="github.com"><img src="image/github.png"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="demo-video" class="aboutus-inactive-container">
+                        <h2> Demo Video about AjChat </h2>
+                        <iframe style="border-radius: 20px; margin-top: 75px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);" width="560" height="315" src="https://www.youtube.com/embed/m1a_GqJf02M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div id="privacy-policy" class="aboutus-inactive-container">
+                        <h2> Privacy Policy </h2>
+                        <p style="margin: 0 100px 0 100px; font-size: 14px; text-align: center;">Bahwa sesungguhnya kemerdekaan itu ialah hak segala bangsa dan oleh sebab itu, maka penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan perikemanusiaan dan perikeadilan.Dan perjuangan pergerakan kemerdekaan Indonesia telah sampailah kepada saat yang berbahagia dengan selamat sentausa mengantarkan rakyat Indonesia ke depan pintu gerbang kemerdekaan Negara Indonesia yang merdeka, bersatu, berdaulat, adil dan makmur.Atas berkat rakhmat Allah Yang Maha Kuasa dan dengan didorongkan oleh keinginan luhur, supaya berkehidupan kebangsaan yang bebas, maka rakyat Indonesia menyatakan dengan ini kemerdekaannya.Kemudian dari pada itu untuk membentuk suatu Pemerintah Negara Indonesia yang melindungi segenap bangsa Indonesia dan seluruh tumpah darah Indonesia dan untuk memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa dan ikut melaksanakan ketertiban dunia yang berdasarkan kemerdekaan, perdamaian abadi dan keadilan sosial, maka disusunlah Kemerdekaan Kebagsaan Indonesia itu dalam suatu Undang-Undang Dasar Negara Indonesia, yang terbentuk dalam suatu susunan Negara Republik Indonesia, yang berkedaulatan rakyat dengan berdasar kepada : Ketuhanan Yang Maha Esa, Kemanusiaan yang adil dan beradab, Persatuan Indonesia dan Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan, serta dengan mewujudkan suatu Keadilan sosial bagi seluruh rakyat Indonesia. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; width: 100vw; position: fixed; justify-content: center; align-items: end; top: 95%;">
+            <p style="font-style: italic; color: white;"">created with 😍 by Kelompok Ajax!</p>
         </div>
     </body>
+    <script type="text/javascript">
+        function showAboutUs() {
+            document.getElementById("about-us").className = "aboutus-active-container";
+            document.getElementById("demo-video").className = "aboutus-inactive-container";
+            document.getElementById("privacy-policy").className = "aboutus-inactive-container";
+        }
+        function showVideoDemo() {
+            document.getElementById("about-us").className = "aboutus-inactive-container";
+            document.getElementById("demo-video").className = "aboutus-active-container";
+            document.getElementById("privacy-policy").className = "aboutus-inactive-container";
+        }
+        function showPrivacyPolicy() {
+            document.getElementById("about-us").className = "aboutus-inactive-container";
+            document.getElementById("demo-video").className = "aboutus-inactive-container";
+            document.getElementById("privacy-policy").className = "aboutus-active-container";
+        }
+    </script>
 </html>

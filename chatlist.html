@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Chat List</title>
         <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="image/Logo1.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
     </head>
     <body>
         <div class="main">
             <div class="chatlist-box">
                 <div class="profile">
-                    <div id="fullname" class="user"></div>
+                    <a href="profile.html"><img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png"></a>
+                    <div style="width: 250px;">
+                        <a href="profile.html" style="color: black;"><p id="fullname"></p></a>
+                        <span style="color: rgba(0, 0, 0, 0.3);">Bio</span>
+                    </div>
                     <div class="logout">
-                        <input type="submit" value="Logout" onclick="logout()" style="width: 99px; border-radius: 4px; margin: 0;">
+                        <input type="submit" value="Logout" onclick="window.location.href = 'index.html'" style="width: 99px; border-radius: 4px; margin: 0;">
                     </div>
                 </div>
-                <div class="chatlist-box-content">
-
+                <div class="profile ">
+                    <p style="font-size: 16px;">Select an user to chat</p>
+                    <a href="chatsearch.html"><img width="17" height="17" src="image/search.png"></a>
+                </div>
+                <div class="profile">
+                    <img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png">
+                    <div style="width: 325px;">
+                        <a href="chat.html" style="color: black;"><p>Golden Lamatwelu</p></a>
+                        <span style="color: rgba(0, 0, 0, 0.3);">nothing bro!</span>
+                    </div>
+                    <img style="border-radius: 50%;" width="15" height="15" src="image/online.png">
                 </div>
             </div>
         </div>
@@ -34,8 +49,5 @@
             }
         }
         document.getElementById("fullname").innerHTML += fullname;
-        function logout() {
-            window.location.href = "login.html";
-        }
     </script>
 </html>

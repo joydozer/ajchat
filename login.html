@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Login</title>
         <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="image/Logo1.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
     </head>
     <body>
         <div class="main">
             <div class="login-box">
                 <div class="login-box-content">
-                    <img src="image/Logo.png" width="87" height="27">
-                    
+                    <a href="index.html"><img src="image/Logo.png" width="87" height="27"></a>
                     <h1>Welcome Folks!</h1>
-                    Email Address<br>
-                    <input id="email" type="text" placeholder="Enter your email"><br>
-                    Password<br>
-                    <input id="password" type="password" placeholder="Enter your password"><br>
-                    <input type="submit" value="Login" onclick="checkAccount();"><br>
+                    <div>
+                        Email Address<br>
+                        <input id="email" type="text" placeholder="Enter your email"><br>
+                        Password<br>
+                        <input id="password" type="password" placeholder="Enter your password"><br>
+                    </div>
+                        <input type="submit" value="Login" onclick="checkAccount();"><br>
+                        
+                        Not yet signed up? <a href="register.html">Signup now</a>
                     
-                    Not yet signed up? <a href="register.html">Signup now</a>
                 </div>
             </div>
         </div>
@@ -31,14 +35,21 @@
             email = document.getElementById("email").value;
             password = document.getElementById("password").value;
             emails = ["goldenlamatwelu@gmail.com", "yumicopapona@gmail.com", "andrekaramoy@gmail.com", "wuntujoy@gmail.com"]
-            for (let i=0; i<email.length; i++) {
-                if(email == emails[i] && password == "12345") {
-                    localStorage.setItem("email",emails[i]);
+            if(email == emails[0] && password == "12345") {
+                    localStorage.setItem("email",emails[0]);
                     window.location.href = "chatlist.html";
-                }
+            } else if(email == emails[1] && password == "12345") {
+                    localStorage.setItem("email",emails[1]);
+                    window.location.href = "chatlist.html";
+            } else if(email == emails[2] && password == "12345") {
+                    localStorage.setItem("email",emails[2]);
+                    window.location.href = "chatlist.html";
+            } else if(email == emails[3] && password == "12345") {
+                    localStorage.setItem("email",emails[3]);
+                    window.location.href = "chatlist.html";
+            } else {
+                alert("Wrong email or password!");
             }
-            alert("Wrong email or password!");
-            
         }
     </script>
 </html>
