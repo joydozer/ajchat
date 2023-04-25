@@ -56,6 +56,7 @@ input[type=submit] {
     font-size: 20px;
     margin-top: 39px;
     margin-bottom: 26px;
+    cursor: pointer;
 }
 
 input[type=image] {
@@ -77,6 +78,16 @@ input[type=image] {
     align-items: center;
     justify-content: center;
 }
+
+.iconIndex {
+    width: 500px;
+    height: 500px;
+}
+
+.indexContent {
+    margin-top: 200px;
+}
+
 .indexGetStarted {
     text-align: right;
 }
@@ -134,7 +145,7 @@ input[type=image] {
 
 .chatlist-box {
     width: 527px;
-    height: 310px;
+    height: 485px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
@@ -234,6 +245,31 @@ input[type=image] {
     align-items: center;
     flex-flow: column;
     row-gap: 30px;
+}
+
+.edit-pfp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-pfp-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 189px;
+    height: 189px;
+    position: absolute;
+    text-align: center;
+    transition: .5s ease;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.edit-pfp-text:hover {
+    opacity: 0.5;
+    background-color: white;
 }
 
 .aboutus-box {
@@ -337,4 +373,21 @@ input[type=image] {
     border-radius: 0;
     height: 24px;
     width: 24px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .iconIndex {
+        width: 250px;
+        height: 250px;
+    }
+    .indexContent {
+        margin-top: 50px;
+    }
+
+    .indexGetStarted h1 {
+        font-size: 55px;
+    }
+    .indexGetStarted p {
+        margin-top: 0 0 25px 0;
+    }
 }
