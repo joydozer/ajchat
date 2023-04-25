@@ -21,18 +21,34 @@
                         <span style="color: rgba(0, 0, 0, 0.3);">nothing bro!</span>
                     </div>
                 </div>
-                <div class="chat-center">
+                <div id="chat-center" class="chat-center">
+                    <div class="speech right">
+                        Hi Golden!
+                    </div>
+                    <div class="speech speechBlack left">
+                        Hey Jonathan!
+                    </div>
                 </div>
                 <div class="chat-top chat-bottom">
-                    <input type="text" placeholder="Kmu jangan senonoh y 😋">
-                    <input type="image" src="image/send.png">
+                    <input id="chat" type="text" placeholder="Kmu jangan senonoh y 😋">
+                    <input type="image" src="image/send.png" onclick="sendText();">
                 </div>
             </div>
         </div>
     </body>
     <script type="text/javascript">
         function sendText() {
+            message = document.getElementById("chat").value;
+            if(message == null || message == "") {
 
+            } else {
+                sendChat =  document.createElement("div");
+                chat = document.createTextNode(message);
+                sendChat.appendChild(chat);
+                sendChat.className = "speech right";
+                document.getElementById("chat-center").appendChild(sendChat);
+                document.getElementById("chat").value = "";
+            }
         }
     </script>
 </html>
