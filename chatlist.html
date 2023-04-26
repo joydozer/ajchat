@@ -55,19 +55,20 @@
             </div>
         </div>
     </body>
-    <script>
+    <script type="text/javascript" src="account&session.js"></script>
+    <script type="text/javascript">
         email = localStorage.getItem("email");
-        emails = ["goldenlamatwelu@gmail.com", "yumicopapona@gmail.com", "andrekaramoy@gmail.com", "wuntujoy@gmail.com"]
         fullname = "";
-        fullnames = ["Golden Lamatwelu", "Yumico Papona", "Andre Karamoy", "Jonathan Wuntu"];
-        for(let i=0; i<emails.length;i++) {
-            if(email == emails[i]) {
-                fullname = fullnames[i];
+        if(email == "admin") {
+            fullname = "admin";
+        } else {
+            for(let i=0; i<emails.length;i++) {
+                if(email == emails[i]) {
+                    fullname = fullnames[i];
+                }
             }
         }
         document.getElementById("fullname").innerHTML += fullname;
-        function search() {
-
-        }
+        console.log(email);
     </script>
 </html>

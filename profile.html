@@ -18,7 +18,7 @@
                     <div class="profile-box-content-mid">
                         <h1> Edit Profile </h1>
                         <img height="189" width="189" style="border-radius: 50%;" src="image/pfpPlaceholder.png">
-                        <p style="font-weight: 500;">Jonathan Wuntu</p>
+                        <p style="font-weight: 500;" id="fullname"></p>
                         <span style="color: rgba(0, 0, 0, 0.3);">Bio</span>
                         <a href="profile-edit.html"><input type="submit" style="width: 211px; height: 51px;" value="Edit Profile"> </a>
                     </div>
@@ -26,4 +26,20 @@
             </div>
         </div>
     </body>
+    <script type="text/javascript" src="account&session.js"></script>
+    <script type="text/javascript">
+        email = localStorage.getItem("email");
+        fullname = "";
+        if(email == "admin") {
+            fullname = "admin";
+        } else {
+            for(let i=0; i<emails.length;i++) {
+                if(email == emails[i]) {
+                    fullname = fullnames[i];
+                }
+            }
+        }
+        document.getElementById("fullname").innerHTML += fullname;
+        console.log(email);
+    </script>
 </html>
