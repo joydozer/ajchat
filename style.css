@@ -20,6 +20,10 @@ a {
     color: rgb(122, 151, 255);
 }
 
+a:hover {
+    color: rgba(96, 118, 199, 1);
+}
+
 label {
     text-align: left;
 }
@@ -29,6 +33,22 @@ input[type=text] {
     height: 42px;
     border-radius: 4px;
     padding-left: 10px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+input#chat {
+    width: 360px;
+    margin-bottom: 0px;
+    height: 37px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 input[type=text]:focus {
@@ -40,11 +60,16 @@ input[type=password] {
     height: 42px;
     border-radius: 4px;
     padding-left: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 input[type=password]:focus {
     outline: 0;
 }
+
 
 input[type=submit] {
     border: 0;
@@ -55,7 +80,7 @@ input[type=submit] {
     border-radius: 4px;
     font-size: 20px;
     margin-top: 39px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
@@ -65,6 +90,14 @@ input[type=submit]:hover {
 
 input[type=image] {
     height: 42px;
+}
+
+input#full-name {
+    margin-bottom: 0px;
+}
+
+input#save-changes {
+    margin-top: 20px;
 }
 
 .logoTop {
@@ -155,6 +188,7 @@ input[type=image] {
     padding-top: 50px;
 }
 
+
 .chatlist-box {
     width: 527px;
     height: 485px;
@@ -202,12 +236,18 @@ input[type=image] {
     padding: 20px;
     border-radius: 10px;
     margin: 20px auto;
+    margin-left: 180px;
     max-width: 200px;
 }
 
 .speechBlack {
     background-color: rgb(51, 51, 51);
 }
+
+.left.speech {
+    margin-left: 50px;
+}
+
 
 .speech::after {
     content: " ";
@@ -277,9 +317,13 @@ input[type=image] {
     height: 189px;
     position: absolute;
     text-align: center;
-    transition: .5s ease;
+    transition: 0.5s ease;
     opacity: 0;
     cursor: pointer;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
 }
 
 .edit-pfp-text:hover {
