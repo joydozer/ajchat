@@ -28,7 +28,7 @@ input[type=text] {
     width: 364px;
     height: 42px;
     border-radius: 4px;
-    padding-left: 10px;    
+    padding-left: 10px;
 }
 
 input[type=text]:focus {
@@ -114,6 +114,10 @@ input[type=image] {
     border-radius: 12px;
 }
 
+.indexGetStarted button:hover {
+    background-color: rgba(217, 217, 217, 1);
+}
+
 .indexAboutUs {
     font-style: italic;
 }
@@ -125,6 +129,10 @@ input[type=image] {
 .indexAboutUs a {
     color: white;
     text-decoration: underline;
+}
+
+.indexAboutUs a:hover {
+    font-weight: bold;
 }
 
 .login-box {
@@ -172,8 +180,9 @@ input[type=image] {
     width: 465px;
     height: 77px;
     background-color: white;
-    border-radius: 15px 15px 0  0;
+    border-radius: 15px 15px 0 0;
 }
+
 .chat-center {
     width: 465px;
     height: 537px;
@@ -184,7 +193,7 @@ input[type=image] {
 .speech {
     font-size: 14px;
     color: white;
-    background-color: rgb(122, 151, 255);   
+    background-color: rgb(122, 151, 255);
     position: relative;
     padding: 20px;
     border-radius: 10px;
@@ -209,14 +218,16 @@ input[type=image] {
 .right.speech::after {
     border-left-color: rgb(122, 151, 255);
     border-right: 0;
-    right: -20px; top: 50%;
+    right: -20px;
+    top: 50%;
     margin-top: -20px;
 }
 
 .left.speech::after {
     border-right-color: rgb(51, 51, 51);
-    border-left: 0;  
-    left: -20px; top: 50%;
+    border-left: 0;
+    left: -20px;
+    top: 50%;
     margin-top: -20px;
 }
 
@@ -308,7 +319,7 @@ input[type=image] {
     width: 100%;
     height: 100%;
     display: flex;
-    
+
     align-items: center;
     flex-flow: column;
 }
@@ -380,6 +391,7 @@ input[type=image] {
         width: 250px;
         height: 250px;
     }
+
     .indexContent {
         margin-top: 50px;
     }
@@ -387,6 +399,7 @@ input[type=image] {
     .indexGetStarted h1 {
         font-size: 55px;
     }
+
     .indexGetStarted p {
         margin-top: 0 0 25px 0;
     }
