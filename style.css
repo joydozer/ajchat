@@ -438,6 +438,10 @@ input#save-changes {
     border-radius: 0;
     height: 24px;
     width: 24px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
 
 .peoples-box-contacts img:hover {
