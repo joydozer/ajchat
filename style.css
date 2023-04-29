@@ -59,6 +59,10 @@ input[type=submit] {
     cursor: pointer;
 }
 
+input[type=submit]:hover {
+    background-color: rgba(96, 118, 199, 1);
+}
+
 input[type=image] {
     height: 42px;
 }
@@ -306,6 +310,10 @@ input[type=image] {
     font-size: 16px;
 }
 
+.aboutus-box-sidebar a:hover {
+    color: rgba(122, 151, 255, 1);
+}
+
 .aboutus-box-content {
     width: 728px;
     height: 620px;
@@ -384,6 +392,17 @@ input[type=image] {
     border-radius: 0;
     height: 24px;
     width: 24px;
+}
+
+.peoples-box-contacts img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
 }
 
 @media only screen and (max-width: 1500px) {
