@@ -144,6 +144,7 @@ input#save-changes {
     border: 0;
     width: 158px;
     height: 62px;
+    cursor: pointer;
     color: rgb(122, 151, 255);
     background-color: white;
     font-weight: 600;
