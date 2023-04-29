@@ -411,6 +411,7 @@ input#save-changes {
 .peoples-box img {
     border-radius: 50%;
     margin-top: 10px;
+    object-fit: cover;
 }
 
 .peoples-box p {
