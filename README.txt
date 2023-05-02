@@ -11,4 +11,6 @@ Nama Anggota:
 3. Pada saat Login masukan email = admin, password = 12345
 4. Website sudah bisa diakses
 
-nb : untuk penggunaan database akun dummy ada pada file account&session.js
+nb: untuk penggunaan database akun dummy ada pada file account&session.js
+    link deploy website (https://ajchat.netlify.app/)
+    untuk video demonstrasi bisa diakses melalui website yang sudah di deploy.
