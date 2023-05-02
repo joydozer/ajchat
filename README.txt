@@ -1,4 +1,4 @@
-UTS-Pemrograman-Web
+UTS TIK2032F Pemrograman Web
 Kelompok 4 (Ajax)
 Nama Anggota:
 1. JONATHAN WUNTU (210211060203)
@@ -12,5 +12,8 @@ Nama Anggota:
 4. Website sudah bisa diakses
 
 nb: untuk penggunaan database akun dummy ada pada file account&session.js
-    link deploy website (https://ajchat.netlify.app/)
-    untuk video demonstrasi bisa diakses melalui website yang sudah di deploy.
+    link deploy website:
+    (https://ajchat.netlify.app/)
+    link video demo, jika video demo pada website deploy tidak bisa diakses:
+    (https://youtu.be/x7wb_iAGW1s)
+    
