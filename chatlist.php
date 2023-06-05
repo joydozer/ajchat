@@ -1,3 +1,12 @@
+<?php
+    include 'db.php';
+    session_start();
+
+    if(!isset($_SESSION['email'])) {
+        header("Location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +29,7 @@
                         <span style="color: rgba(0, 0, 0, 0.3);">Bio</span>
                     </div>
                     <div class="logout">
-                        <input type="submit" value="Logout" onclick="window.location.href = 'index.html'" style="width: 99px; border-radius: 4px; margin: 0;">
+                        <input type="submit" value="Logout" onclick="window.location.href = 'logout.php'" style="width: 99px; border-radius: 4px; margin: 0;">
                     </div>
                 </div>
                 <div class="profile ">
@@ -31,7 +40,7 @@
                 <div class="profile" style="flex-flow: row;">
                     <img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png">
                     <div style="width: 325px;">
-                        <a href="chat.html" style="color: black;"><p>Golden Lamatwelu</p></a>
+                        <a href="chat.php" style="color: black;"><p>Golden Lamatwelu</p></a>
                         <span style="color: rgba(0, 0, 0, 0.3);">nothing bro!</span>
                     </div>
                     <img style="border-radius: 50%;" width="15" height="15" src="image/online.png">

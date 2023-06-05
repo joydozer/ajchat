@@ -1,3 +1,11 @@
+<?php
+    include 'db.php';
+    session_start();
+    
+    if(!isset($_SESSION['email'])) {
+        header("Location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,13 +22,13 @@
         <div class="main">
             <div class="chat-box profile-box">
                 <div class="profile-box-content">
-                    <a href="chatlist.html" style="margin-left: 20px;"><img src="image/Arrow 2.png"></a>
+                    <a href="chatlist.php" style="margin-left: 20px;"><img src="image/Arrow 2.png"></a>
                     <div class="profile-box-content-mid">
                         <h1> Edit Profile </h1>
                         <img height="189" width="189" style="border-radius: 50%;" src="image/pfpPlaceholder.png">
                         <p style="font-weight: 500;" id="fullname"></p>
                         <span style="color: rgba(0, 0, 0, 0.3);">Bio</span>
-                        <a href="profile-edit.html"><input type="submit" style="width: 211px; height: 51px;" value="Edit Profile"> </a>
+                        <a href="profile-edit.php"><input type="submit" style="width: 211px; height: 51px;" value="Edit Profile"> </a>
                     </div>
                 </div>
             </div>

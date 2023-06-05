@@ -1,3 +1,6 @@
+<?php
+    #session_start()
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +26,7 @@
                     <h1>Let's chat</h1>
                     <h1 style="color: black; margin-bottom: 25px;">to be more closer!</h1>
                     <p>AjChat is a website that you can use to chat <br> with each other!</p>
-                    <a href="login.html"><button>Get Started!</button></a>
+                    <a href="login.php"><button>Get Started!</button></a>
                 </div>
                 <div class="indexAboutUs">
                     <p> Want to know about the Developers? </p>
