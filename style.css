@@ -88,8 +88,15 @@ input[type=submit]:hover {
     background-color: rgba(96, 118, 199, 1);
 }
 
-input[type=image] {
-    height: 42px;
+input[type=file] {
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    height: 189px;
+    width: 189px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 input#full-name {
