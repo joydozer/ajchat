@@ -5,6 +5,7 @@
     if(!isset($_SESSION['email'])) {
         header("Location: login.php");
     }
+    $username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +24,9 @@
         <div class="main">
             <div class="chatlist-box">
                 <div class="profile">
-                    <a href="profile.html"><img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png"></a>
+                    <a href="profile.php"><img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png"></a>
                     <div style="width: 250px;">
-                        <a href="profile.html" style="color: black;"><p id="fullname"></p></a>
+                        <a href="profile.php" style="color: black;"><p id="fullname"><?php echo $username; ?></p></a>
                         <span style="color: rgba(0, 0, 0, 0.3);">Bio</span>
                     </div>
                     <div class="logout">
@@ -66,7 +67,7 @@
     </body>
     <script type="text/javascript" src="account&session.js"></script>
     <script type="text/javascript">
-        email = localStorage.getItem("email");
+        /*email = localStorage.getItem("email");
         fullname = "";
         if(email == "admin") {
             fullname = "admin";
@@ -78,6 +79,6 @@
             }
         }
         document.getElementById("fullname").innerHTML += fullname;
-        console.log(email);
+        console.log(email);*/
     </script>
 </html>

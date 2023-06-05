@@ -1,8 +1,5 @@
 <?php
     include 'db.php';
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
     session_start();
 
     if(isset($_SESSION['email'])) {
@@ -19,7 +16,8 @@
             $hp = $row['password'];
             if(password_verify($password, $hp)) {
                 $_SESSION['email'] = $_POST['email'];
-                header("Location: chatlist.php")
+                $_SESSION['username'] = $row['name'];
+                header("Location: chatlist.php");
             } else {
                 echo "<script>alert('We're unable to verify your password, please try again later!')</script>";
                 echo "<script>window.location = 'login.php'</script>";
