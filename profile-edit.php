@@ -6,8 +6,12 @@
         header("Location: login.php");
     }
 
-    
-    if(isset($_POST['submit']) && !empty($_FILES['pfp'])) {
+    $get_profile_query = "SELECT * FROM account WHERE id=1";
+    $get_profile_result = mysqli_query($conn, $get_profile_query);
+    $pfp = mysqli_fetch_row($get_profile_result);
+    $pfp_dir = "pfp/" . $pfp[4];
+
+    if(isset($_POST['submit'])) {
         $dir = "pfp/";
         $file = $_FILES['pfp']['name'];
         $tmp_dir = $_FILES['pfp']['tmp_name'];
@@ -28,8 +32,9 @@
         $new_file = uniqid();
         $new_file = $new_file . '.' . $extension_file;
         move_uploaded_file($tmp_dir, $dir . $new_file);
-        $query = "UPDATE account SET pfp = '$file' WHERE id=1";
+        $query = "UPDATE account SET pfp = '$new_file' WHERE id=1";
         mysqli_query($conn, $query);
+        header("Location: profile-edit.php");
     }
     
 ?>
@@ -56,7 +61,7 @@
                     <h1> Edit Profile </h1>
                     <form action="" method="POST" enctype="multipart/form-data" style="text-align: center;">
                     <div class="edit-pfp">
-                        <img height="189" width="189" style="border-radius: 50%;" src="image/pfpPlaceholder.png">
+                        <img height="189" width="189" style="border-radius: 50%;" src="<?php echo $pfp_dir; ?>">
                         <div class="edit-pfp-text">
                             Change Picture
                             <input name="pfp" type="file">
