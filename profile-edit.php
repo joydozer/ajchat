@@ -6,8 +6,32 @@
         header("Location: login.php");
     }
 
-    $dir = "pfp/";
-
+    
+    if(isset($_POST['submit']) && !empty($_FILES['pfp'])) {
+        $dir = "pfp/";
+        $file = $_FILES['pfp']['name'];
+        $tmp_dir = $_FILES['pfp']['tmp_name'];
+        $error = $_FILES['pfp']['error'];
+        $file_size = $_FILES['pfp']['size'];
+        $extension_valid = ['jpg', 'jpeg', 'png'];
+        $extension_file = explode('.', $file);
+        $extension_file = strtolower(end($extension_file));
+        if($error === 4) {
+            echo "<script>alert('Please choose an image first!')</script>";
+        }
+        if(in_array($extension_file, $extension_valid)) {
+            echo "<script>alert('Please only upload images extension files, like .jpg, .jpeg, and .png')</script>";
+        }
+        if($file_size > 20000000) {
+            echo "<script>alert('Your image files is too big!')</script>";
+        }
+        $new_file = uniqid();
+        $new_file = $new_file . '.' . $extension_file;
+        move_uploaded_file($tmp_dir, $dir . $new_file);
+        $query = "UPDATE account SET pfp = '$file' WHERE id=1";
+        mysqli_query($conn, $query);
+    }
+    
 ?>
 <!DOCTYPE html>
 <html>
