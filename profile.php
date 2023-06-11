@@ -39,7 +39,7 @@
                         <img height="189" width="189" style="border-radius: 50%;" src="<?php echo $pfp_dir; ?>">
                         <p style="font-weight: 500;" id="fullname"><?php echo $pfp[1]; ?></p>
                         <span style="color: rgba(0, 0, 0, 0.3);"><?php echo $pfp[5]; ?></span>
-                        <a href="profile-edit.php" style="height: 0px;"><input type="submit" style="width: 211px; height: 51px;" value="Edit Profile"> </a>
+                        <a href="profile_edit.php" style="height: 0px;"><input type="submit" style="width: 211px; height: 51px;" value="Edit Profile"> </a>
                     </div>
                 </div>
             </div>

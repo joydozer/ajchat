@@ -2,7 +2,7 @@
     $server = "localhost";
     $user = "root";
     $pass = "";
-    $database = "ajchat";
+    $database = "ajchat_1";
     $conn = mysqli_connect($server, $user, $pass, $database);
 
     if (!$conn) {

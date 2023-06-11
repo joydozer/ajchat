@@ -2,10 +2,20 @@
     include 'db.php';
     session_start();
 
-    if(!isset($_SESSION['email'])) {
+    if(!isset($_SESSION['email']) && !isset($_SESSION['id'])) {
         header("Location: login.php");
     }
-
+    $id = $_SESSION['id'];
+    $get_profile_query = "SELECT * FROM account WHERE id=$id";
+    $get_profile_result = mysqli_query($conn, $get_profile_query);
+    $pfp = mysqli_fetch_row($get_profile_result);
+    if($pfp[4] === NULL) { //nama pfp
+        $pfp[4] = "pfpPlaceholder.png";
+    }
+    if($pfp[5] === NULL) { //profile bio
+        $pfp[5] = "Biography";
+    }
+    $pfp_dir = "pfp/" . $pfp[4];
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +36,7 @@
     <div class="main">
         <div class="chat-box">
             <div class="chat-top">
-                <a href="chatlist.html" style="margin-left: 20px;"><img src="image/Arrow 2.png"></a>
+                <a href="chatlist.php" style="margin-left: 20px;"><img src="image/Arrow 2.png"></a>
                 <img src="image/pfpPlaceholder.png" width="55" height="55" style="border-radius: 50%;">
                 <div>
                     <p style="font-weight: 500;">Golden Lamatwelu</p>

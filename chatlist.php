@@ -31,6 +31,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <dialog id="addPeople">
+            <img src="image/Arrow 2.png" style="cursor: pointer; scale: 1.2;" onclick="addPeople.close()">
+            <div class="addPeopleMain">
+            <h3>Add more people</h3>
+            <form method="POST" action="">
+                <input type="text" placeholder="Enter the four unique ID digits of your friends">
+                <input type="image" src="image/search.png">
+            </form>
+            <div>
+        </dialog>
         <div class="main">
             <div class="chatlist-box"> <!-- Profile Current User -->
                 <div class="profile">
@@ -43,11 +53,14 @@
                         <input type="submit" value="Logout" onclick="window.location.href = 'logout.php'" style="width: 99px; border-radius: 4px; margin: 0;">
                     </div>
                 </div>
-                <div class="profile">
-                    <div>
-                        <p style="font-size: 16px;">Select an user to chat</p>
+                <div class="profile" style="flex-flow: row; align-items: center; justify-content: space-between; padding-right: 20px">
+                    <p style="font-size: 16px;">Select an user to chat</p>
+                    <div style="display: flex; align-items: center; flex-flow: row; cursor: pointer;" onclick="addPeople.showModal()">
+                        <p style="font-size: 16px; padding-right: 8px;">Add more people</p>
+                        <img width="25" height="25" src="image/add.png">
                     </div>
                 </div>
+                <br>
                 <div style="height: 300px; overflow-x: hidden;"> <!-- Chat list -->
                 <div class="profile" style="flex-flow: row;">
                     <img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png">

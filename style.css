@@ -107,6 +107,19 @@ input#save-changes {
     margin-top: 20px;
 }
 
+dialog {
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.addPeopleMain {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    gap: 10px;
+}
+
 .logoTop {
     display: flex;
     align-items: center;

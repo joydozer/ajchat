@@ -8,9 +8,9 @@
         $email = $_POST['email'];
         $pwd = $_POST['password'];
         $password = password_hash($pwd, PASSWORD_DEFAULT);
-        $query = "INSERT INTO account VALUES('$name', '$email', '$password')";
+        $query = "INSERT INTO account VALUES(NULL, '$name', '$email', '$password', NULL, NULL)";
         if(mysqli_query($query)) {
-            echo "<script>alert('Your account has been created!')</script>";
+            echo "<script>alert('Your account has been created, if you want to proceed please login!')</script>";
             echo "<script>window.location = 'login.php'</script>";
         } else {
             echo "<script>alert('Theres something wrong when creating your account, please try again!')</script>";
