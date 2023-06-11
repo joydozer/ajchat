@@ -2,13 +2,19 @@
     include 'db.php';
     session_start();
 
-    if(!isset($_SESSION['email'])) {
+    if(!isset($_SESSION['email']) && !isset($_SESSION['id'])) {
         header("Location: login.php");
     }
-
-    $get_profile_query = "SELECT * FROM account WHERE id=1";
+    $id = $_SESSION['id'];
+    $get_profile_query = "SELECT * FROM account WHERE id=$id";
     $get_profile_result = mysqli_query($conn, $get_profile_query);
     $pfp = mysqli_fetch_row($get_profile_result);
+    if($pfp[4] === NULL) { //nama pfp
+        $pfp[4] = "pfpPlaceholder.png";
+    }
+    if($pfp[5] === NULL) { //profile bio
+        $pfp[5] = "Biography";
+    }
     $pfp_dir = "pfp/" . $pfp[4];
 
     if(isset($_POST['submit'])) {
@@ -56,7 +62,7 @@
     <div class="main">
         <div class="chat-box profile-box">
             <div class="profile-box-content">
-                <a href="chatlist.php" style="margin-left: 20px;"><img src="image/Arrow 2.png"></a>
+                <a href="profile.php" style="margin-left: 20px;"><img src="image/Arrow 2.png"></a>
                 <div class="profile-box-content-mid" style="row-gap: 10px;">
                     <h1> Edit Profile </h1>
                     <form action="" method="POST" enctype="multipart/form-data" style="text-align: center;">
@@ -69,9 +75,9 @@
                     </div>
                     <br>
                     <p style="text-align: left;">Full Name</p>
-                    <input id="full-name" type="text" placeholder="Full Name"><br> <br>
+                    <input id="full-name" type="text" placeholder="<?php echo $pfp[1]; ?>"><br> <br>
                     <p style="text-align: left;">Bio</p>
-                    <input id="bio" type="text" placeholder="Biography"> <br>
+                    <input id="bio" type="text" placeholder="<?php echo $pfp[5]; ?>"> <br>
                     <input name="submit" id="save-changes" type="submit" style="width: 211px; height: 51px;" value="Save Changes">
                     </form>
                 </div>
