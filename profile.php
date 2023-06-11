@@ -2,9 +2,20 @@
     include 'db.php';
     session_start();
     
-    if(!isset($_SESSION['email'])) {
+    if(!isset($_SESSION['email']) && !isset($_SESSION['id'])) {
         header("Location: login.php");
     }
+    $id = $_SESSION['id'];
+    $get_profile_query = "SELECT * FROM account WHERE id=$id";
+    $get_profile_result = mysqli_query($conn, $get_profile_query);
+    $pfp = mysqli_fetch_row($get_profile_result);
+    if($pfp[4] === NULL) { //nama pfp
+        $pfp[4] = "pfpPlaceholder.png";
+    }
+    if($pfp[5] === NULL) { //profile bio
+        $pfp[5] = "Biography";
+    }
+    $pfp_dir = "pfp/" . $pfp[4];
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,10 +36,10 @@
                     <a href="chatlist.php" style="margin-left: 20px;"><img src="image/Arrow 2.png"></a>
                     <div class="profile-box-content-mid">
                         <h1> Edit Profile </h1>
-                        <img height="189" width="189" style="border-radius: 50%;" src="image/pfpPlaceholder.png">
-                        <p style="font-weight: 500;" id="fullname"></p>
-                        <span style="color: rgba(0, 0, 0, 0.3);">Bio</span>
-                        <a href="profile-edit.php"><input type="submit" style="width: 211px; height: 51px;" value="Edit Profile"> </a>
+                        <img height="189" width="189" style="border-radius: 50%;" src="<?php echo $pfp_dir; ?>">
+                        <p style="font-weight: 500;" id="fullname"><?php echo $pfp[1]; ?></p>
+                        <span style="color: rgba(0, 0, 0, 0.3);"><?php echo $pfp[5]; ?></span>
+                        <a href="profile-edit.php" style="height: 0px;"><input type="submit" style="width: 211px; height: 51px;" value="Edit Profile"> </a>
                     </div>
                 </div>
             </div>

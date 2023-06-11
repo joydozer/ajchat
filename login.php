@@ -16,7 +16,7 @@
             $hp = $row['password'];
             if(password_verify($password, $hp)) {
                 $_SESSION['email'] = $_POST['email'];
-                $_SESSION['username'] = $row['name'];
+                $_SESSION['id'] = $row['id'];
                 header("Location: chatlist.php");
             } else {
                 echo "<script>alert('We're unable to verify your password, please try again later!')</script>";
