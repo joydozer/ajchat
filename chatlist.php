@@ -127,35 +127,9 @@
                     </div>
                 </div>
                 <?php } ?>
-                <!--
-                <div class="profile" style="flex-flow: row;">
-                    <img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png">
-                    <div style="width: 325px;">
-                        <a href="chat.php" style="color: black;"><p>Golden Lamatwelu</p></a>
-                        <span style="color: rgba(0, 0, 0, 0.3);">nothing bro!</span>
-                    </div>
-                    <img style="border-radius: 50%;" width="15" height="15" src="image/online.png">
-                </div>
-                <div class="profile" style="flex-flow: row;">
-                    <img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png">
-                    <div style="width: 325px;">
-                        <a href="chat.html" style="color: black;"><p>Marsya Papona</p></a>
-                        <span style="color: rgba(0, 0, 0, 0.3);">Exo-L</span>
-                    </div>
-                    <img style="border-radius: 50%;" width="15" height="15" src="image/online.png">
-                </div>
-                <div class="profile" style="flex-flow: row;">
-                    <img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="image/pfpPlaceholder.png">
-                    <div style="width: 325px;">
-                        <a href="chat.html" style="color: black;"><p>Andre Karamoy</p></a>
-                        <span style="color: rgba(0, 0, 0, 0.3);">pake nanya</span>
-                    </div>
-                    <img style="border-radius: 50%;" width="15" height="15" src="image/online.png">
-                </div> -->
                 </div>
                 
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="account&session.js"></script>
 </html>
