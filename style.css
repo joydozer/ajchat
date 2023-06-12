@@ -111,6 +111,11 @@ dialog {
     height: 300px;
     border: 0;
     border-radius: 10px;
+    
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(5px);
 }
 
 .addPeopleMain {

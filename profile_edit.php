@@ -47,10 +47,12 @@
         if(!in_array($extension_file, $extension_valid)) {
             echo "<script>alert('Please upload again with the allowed extension files, like .jpg, .jpeg, .gif, and .png')</script>";
             echo "<script>window.location = 'profile_edit.php'</script>";
+            die();
         }
         if($file_size > 20000000) {
             echo "<script>alert('Your image files is too big!')</script>";
             echo "<script>window.location = 'profile_edit.php'</script>";
+            die();
         }
         $query = "UPDATE account SET name = '$new_name', pfp = '$new_file', bio = '$new_bio' WHERE id=$id";
         mysqli_query($conn, $query); 

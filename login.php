@@ -11,7 +11,7 @@
         $password = $_POST['password'];
         $query = "SELECT * FROM account WHERE email='$email'";
         $result = mysqli_query($conn, $query);
-        if($result->num_rows > 0) {
+        if(mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
             $hp = $row['password'];
             if(password_verify($password, $hp)) {
@@ -21,10 +21,12 @@
             } else {
                 echo "<script>alert('We're unable to verify your password, please try again later!')</script>";
                 echo "<script>window.location = 'login.php'</script>";
+                die();
             }
         } else {
             echo "<script>alert('Your email or password is wrong, please try again!')</script>";
             echo "<script>window.location = 'login.php'</script>";
+            die();
         }
     }
 ?>

@@ -1,5 +1,8 @@
 <?php
     include 'db.php';
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     session_start();
 
 
@@ -7,15 +10,31 @@
         $name = $_POST['name'];
         $email = $_POST['email'];
         $pwd = $_POST['password'];
+        $check_email = mysqli_query($conn, "SELECT * FROM account WHERE email='$email'");
+        if(mysqli_num_rows($check_email)) {
+            echo "<script>alert('Email has already been used please use another email to sign up!')</script>";
+            echo "<script>window.location = 'register.php'</script>";
+        } else {
         $password = password_hash($pwd, PASSWORD_DEFAULT);
-        $query = "INSERT INTO account VALUES(NULL, '$name', '$email', '$password', NULL, NULL)";
-        if(mysqli_query($query)) {
-            echo "<script>alert('Your account has been created, if you want to proceed please login!')</script>";
-            echo "<script>window.location = 'login.php'</script>";
+        $chatlist = mysqli_query($conn, "CREATE TABLE `chatlist_$email` (name VARCHAR(100) NOT NULL, id INT(11) NOT NULL)");
+        $query = mysqli_query($conn, "INSERT INTO account VALUES(NULL, '$name', '$email', '$password', NULL, NULL)");
+        if($chatlist) {
+            if($query) {
+                echo "<script>alert('Your account has been created, if you want to proceed please login!')</script>";
+                echo "<script>window.location = 'login.php'</script>";
+            } else {
+                echo "<script>alert('Theres something wrong when creating your database, please try again!')</script>";
+                echo "<script>window.location = 'register.php'</script>";
+                die();
+            }
+            
         } else {
             echo "<script>alert('Theres something wrong when creating your account, please try again!')</script>";
             echo "<script>window.location = 'register.php'</script>";
+            die();
+        } 
         }
+        
     }
     
 ?>
