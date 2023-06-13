@@ -115,7 +115,7 @@
                 <div class="profile" style="flex-flow: row; cursor: pointer;">
                     <img style="border-radius: 50%; margin-left: 20px;" width="55" height="55" src="pfp/<?php echo $get_profile_people[1]; ?>">
                     <div style="width: 325px;">
-                        <a href="chat.php" style="color: black;"><p><?php echo $row["name"]; ?></p></a>
+                        <a href="chat.php<?php echo "?id=" . $id_chatlist; ?>" style="color: black;"><p><?php echo $row["name"]; ?></p></a>
                         <span style="color: rgba(0, 0, 0, 0.3);"><?php echo $get_profile_people[2]; ?></span>
                     </div>
                 </div>

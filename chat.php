@@ -6,16 +6,15 @@
         header("Location: login.php");
     }
     $id = $_SESSION['id'];
-    $get_profile_query = "SELECT * FROM account WHERE id=$id";
-    $get_profile_result = mysqli_query($conn, $get_profile_query);
-    $pfp = mysqli_fetch_row($get_profile_result);
-    if($pfp[4] === NULL) { //nama pfp
-        $pfp[4] = "pfpPlaceholder.png";
-    }
-    if($pfp[5] === NULL) { //profile bio
-        $pfp[5] = "Biography";
-    }
     $pfp_dir = "pfp/" . $pfp[4];
+    $receiver_id = $_GET['id'];
+    $get_receiver_profile = mysqli_fetch_row(mysqli_query($conn, "SELECT name,bio,pfp FROM account WHERE id=$receiver_id"));
+    if($get_receiver_profile[1] == NULL) {
+        $get_receiver_profile[1] = "Biography";
+    }
+    if($get_receiver_profile[2] == NULL) {
+        $get_receiver_profile[2] = "pfpPlaceholder.png";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -37,10 +36,10 @@
         <div class="chat-box">
             <div class="chat-top">
                 <a href="chatlist.php" style="margin-left: 20px;"><img src="image/Arrow 2.png"></a>
-                <img src="image/pfpPlaceholder.png" width="55" height="55" style="border-radius: 50%;">
+                <img src="pfp/<?php echo $get_receiver_profile[2] ?>" width="55" height="55" style="border-radius: 50%;">
                 <div>
-                    <p style="font-weight: 500;">Golden Lamatwelu</p>
-                    <span style="color: rgba(0, 0, 0, 0.3);">nothing bro!</span>
+                    <p style="font-weight: 500;"><?php echo $get_receiver_profile[0]; ?></p>
+                    <span style="color: rgba(0, 0, 0, 0.3);"><?php echo $get_receiver_profile[1]; ?></span>
                 </div>
             </div>
             <div id="chat-center" class="chat-center">
