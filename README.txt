@@ -1,4 +1,4 @@
-UTS TIK2032F Pemrograman Web
+UAS TIK2032F Pemrograman Web
 Kelompok 4 (Ajax)
 Nama Anggota:
 1. JONATHAN WUNTU (210211060203)
@@ -6,14 +6,11 @@ Nama Anggota:
 3. GOLDEN ANTONIUS U.A. LAMATWELU (210211060053)
 4. MARSYA NATANIA YUMICO PAPONA (210211060028)
 
-1. Akses index.html terlebih dahulu sebagai landing page dari website
+1. Akses index.php terlebih dahulu sebagai landing page dari website
 2. Klik Get Started
-3. Pada saat Login masukan email = admin, password = 12345
+3. Pada saat Login masukan email = admin@ajchat.com, password = admin
 4. Website sudah bisa diakses
 
-nb: untuk penggunaan database akun dummy ada pada file account&session.js
-    link deploy website:
-    (https://ajchat.netlify.app/)
-    link video demo, jika video demo pada website deploy tidak bisa diakses:
-    (https://youtu.be/x7wb_iAGW1s)
+Link Website: ajchat.fun
+Untuk penambahan teman, ke bagian add more people, lalu tambahkan id teman anda, misalkan id 2 untuk id dari Jonathan, maka masukkan angka 2 pada input form yang ada
     

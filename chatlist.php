@@ -24,6 +24,12 @@
             echo "<script>window.location = 'chatlist.php'</script>";
             die();
         }
+        $check_idPeople = mysqli_query($conn, "SELECT id FROM account WHERE id=$idPeople");
+        if(mysqli_num_rows($check_idPeople) == 0) {
+            echo "<script>alert('Currently there is no people with this id!')</script>";
+            echo "<script>window.location = 'chatlist.php'</script>";
+            die();
+        }
         $get_allprofile_result = mysqli_query($conn, "SELECT * FROM account WHERE id=$idPeople");
         $check_chatlist_duplicate = mysqli_query($conn, "SELECT * FROM `$chatlist` WHERE id=$idPeople");
         $people = mysqli_fetch_row($get_allprofile_result);
