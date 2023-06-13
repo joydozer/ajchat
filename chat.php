@@ -81,7 +81,7 @@
                         echo $decryption; 
                     ?>
                 </div>
-                <?php } else if($row['id_receiver'] == $id) { ?>
+                <?php } else if($row['id_receiver'] == $id && $row['id_sender'] == $receiver_id) { ?>
                 <div class="speech speechBlack left">
                     <?php
                         $decryption = openssl_decrypt($row['msg'], $ciphering, $encryption_key_receiver, $options, $encryption_iv);
@@ -100,20 +100,5 @@
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    function sendText() {
-        message = document.getElementById("chat").value;
-        if (message == null || message == "") {
-
-        } else {
-            sendChat = document.createElement("div");
-            chat = document.createTextNode(message);
-            sendChat.appendChild(chat);
-            sendChat.className = "speech right";
-            document.getElementById("chat-center").appendChild(sendChat);
-            document.getElementById("chat").value = "";
-        }
-    }
-</script>
 
 </html>
